@@ -1,0 +1,36 @@
+{
+    "lang": "en-us",
+    "name": "Weight Converter App",
+    "short-name": "Weight Converter",
+    "description": "A basic Weight Converter application that can convert weights",
+    "start_url": "/",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "icc.png",
+            "sizes": "512x512"
+        }
+    ],
+    "screenshots":[
+        {
+            "src": "ss1.png",
+            "type": "png",
+            "sizes": "919x614",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "ss2.png",
+            "type": "png",
+            "sizes": "1732x673",
+            "form_factor": "wide"
+        }
+    ],
+    "hosting": {
+        "site": "converter-app",
+        "public": "public"
+        
+    }
+}

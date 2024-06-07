@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="container">
+        <h1>Weight Converter</h1>
+        <label for="converterType">Select Converter:</label>
+        <select id="converterType" onchange="convertWeight()">
+            <option value="kgToPounds">Kilograms to Pounds</option>
+            <option value="poundsToKg">Pounds to Kilograms</option>
+            <option value="kgToGrams">Kilograms to Grams</option>
+        </select>
+
+        <label for="weightInput">Enter weight:</label>
+        <input type="number" id="weightInput">
+        <span id="unitLabel"></span>
+
+        <p>Result: <span id="result"></span></p>
+    </div>
+
+    <script src="converter.js"></script>
+    <script src="sw.js"></script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js', {scope:'/Activities/'})
+        }else{
+            console.log('not in navigator');
+        }
+    </script>
+</body>
+</html>
